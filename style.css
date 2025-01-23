@@ -1,0 +1,470 @@
+@font-face {
+    font-family: "Yay Holiday";
+    src: url("fonts/Yay Holiday.ttf") format("truetype");
+    font-family: "all round gothic";
+    font-family: "Nirpa";
+    src:url("fonts/Nirpa.ttf") format("truetype")
+}
+
+body{
+    margin: 0;
+    background-color: rgb(252,227,239);
+}
+.bodygroen{
+    background-color: rgb(238, 242, 209);
+}
+.logo, .logogroen{
+    width: 130px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: -80px;
+}
+/*hamburger naviagatie*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 2em;
+}
+header img{
+    height: 30px;
+}
+nav{
+    position: relative;
+}
+.menu, .menugroen{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; 
+    flex-direction: column; 
+    position: fixed;
+    width: 190px;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    min-height: 800px;
+    z-index: 1;
+    padding-top: 120px;
+    padding-left: 10px;
+}
+.menu{
+    background: rgb(252, 176, 215);
+}
+.menugroen{
+    background: rgb(203,211,141); 
+}
+.menu li, .menugroen li{
+    padding: 0;
+    margin: 0;
+}
+.menu li a, .menugroen li a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    font-family:"Yay Holiday";
+    font-size: 40px;  
+}
+/* menu iconen */
+.menutoggle {
+    display: none; /* Verberg de checkbox */
+}
+.menuicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+.hamburgericon,
+.hamburgergroen{
+    display: block; /* Standaard zichtbaar */
+    width: 100%;
+    height: auto;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+.kruisjeicon {
+    display: none; /* Verborgen */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+.menutoggle:checked ~ .menuicon .hamburgericon{
+    display: none; /* Verberg hamburger */
+}
+.menutoggle:checked ~ .menuicon .kruisjeicon{
+    display: block; /* Toon kruisje */
+}
+.menutoggle:checked ~ .menu {
+    display: flex; /* Maak menu zichtbaar */
+}
+/*navigatie groen*/
+.menutoggle:checked ~ .menuicon .hamburgergroen{
+    display: none; /* Verberg hamburger */
+}
+.menutoggle:checked ~ .menugroen {
+    display: flex; /* Maak menu zichtbaar */
+}
+/*home pagina opmaak*/ 
+main{
+    position: relative;
+    width: 350px;
+    margin: auto;
+    margin-top: 40px ;
+}
+main img{
+    width: 100%;
+    object-fit: cover;
+}
+.welkom{
+    font-family:"Yay Holiday";
+    font-size: 42px;
+    color: rgb(252, 176, 215);
+    position: absolute; 
+    top: 13px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    margin: 0;
+    letter-spacing: 2px;
+}
+.intro{
+    font-family:"Yay Holiday";
+    font-size: 17px;
+    color: rgb(252, 176, 215); 
+    position: absolute;
+    top: 73px; 
+    left: 50%; 
+    transform: translateX(-50%) scaleX(1.5);
+    margin: 0;
+    width: 200px;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: 1.5px;
+    word-spacing: 2px;
+}
+.highlight{
+    color: rgb(242, 95, 162)
+}
+.highlight2{
+    color: rgb(159,165,83);
+}
+/*knop opmaak*/
+.knop1{
+    display: inline-block;
+    position: absolute;
+    top: 275px;
+    left: 160px;
+    padding: 5px 30px;
+    background-color: rgb(252, 176, 215);
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nirpa",sans-serif;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    box-shadow: 4px 6px 10px -3px rgb(211, 79, 151)
+}
+.knop2{
+    display: inline-block;
+    padding: 5px 30px;
+    background-color: rgb(203,211,141);
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nirpa",sans-serif;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    box-shadow: 4px 6px 10px -3px rgb(159,165,83);
+    margin: 10px;
+    transform: translateY(-40px) translateX(85px);
+}
+/*opmaak illutraties*/
+.hempje{
+position: absolute;
+width: 75px;
+transform: translateX(35%);
+top: 95px;
+}
+.slogan{
+    position: absolute;
+    width: 85px;
+    top: 110px;
+    left: 265px;
+}
+.trui{
+position: absolute;
+width: 160px;
+left: 180px ;
+top: 500px;
+}
+/*waarom pagina opmaak*/
+.nana2{
+    position: relative; 
+    margin: 0;
+    top: -20px; 
+    width: 310px;
+    left: 40px;
+}
+.whyvintage{
+    font-family:"Yay Holiday";
+    font-size: 30px;
+    color: rgb(203,211,141);
+    position: absolute; 
+    margin: 0;
+    letter-spacing: 2px;
+    text-align: center; 
+    top: -5px;
+    left: 85px;
+    transform: scaleX(1.3);
+}
+.wolk1{
+    position: relative;
+    width: 190px;
+    top: -120px;
+}
+.reden1{
+    font-family:"Yay Holiday";
+    position: absolute; 
+    color: rgb(203,211,141);
+    font-size: 13px;
+    text-align: left;
+    max-width: 120px;
+    line-height: 1.5;
+    transform: scaleX(1.3);
+    top: 145px;
+    left: 38px;
+}
+.wolk2{
+    position: relative;
+    width: 235px;
+    top: -110px;
+    left: 98px;
+}
+.reden2{
+    font-family:"Yay Holiday";
+    position: absolute; 
+    color: rgb(203,211,141);
+    font-size: 12px;
+    text-align: right;  
+    max-width: 125px;
+    line-height: 1.5;
+    transform: scaleX(1.4);
+    top: 310px;
+    left: 160px;
+    word-spacing: 1px;
+}
+.wolk3{
+    position: relative;
+    width: 195px;
+    top: -100px;
+    left: 15px;
+}
+.reden3{
+    font-family:"Yay Holiday";
+    position: absolute; 
+    color: rgb(203,211,141);
+    font-size: 13.5px;
+    text-align: left;
+    max-width: 115px;
+    line-height: 1.5;
+    transform: scaleX(1.3);
+    top: 495px;
+    left: 55px;
+}
+.aanraderh2{
+    font-family:"Yay Holiday";
+    position: absolute;
+    text-align: center; 
+    font-size: 16px;
+    color: rgb(159,165,83); 
+    top: 660px;
+    left: 50%;
+    max-width: 200px;
+    transform: translateX(-50%) scaleX(1.4);
+}
+/*opmaak illustraties*/
+.tas{
+    position: absolute;
+    width: 75px;
+    transform: translateX(25%);
+    top: 100px;  
+}
+.rok{
+    position: absolute;
+    width: 95px;
+    transform: translateX(35%);
+    top: 500px;  
+}
+.broek{
+    position: absolute;
+    width: 85px;
+    transform: translateX(290%);
+    top: 670px;   
+}
+/*aanrader pagina opmaak*/
+.nana3{
+    position: relative;
+    margin: auto;
+    top: -20px;     
+}
+/*nana haar tekst*/
+.aanrader{
+    font-family:"Yay Holiday";
+    font-size: 19.5px;
+    color: rgb(252, 176, 215);
+    position: absolute; 
+    top: -10px; 
+    left: 50%; 
+    transform: translateX(-80%);
+    margin: 0;
+    letter-spacing: 2px;  
+    text-align: center;
+}
+/*recentie box*/
+.recentiebox{
+    display: flex;
+    position: relative;
+    margin: auto;
+    width: 290px;
+    justify-content: center;
+    top: -30px;
+}
+.aanrader2{
+    font-family:"Nirpa", sans-serif;
+    position: absolute;
+    color: rgb(242, 95, 162);
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 0;
+    top: 275px;
+    left: 20% ;
+    transform: scaleX(1.5);
+}
+.aanrader3{
+    font-family: "all-round-gothic", sans-serif;
+    font-size: 15px;
+    position: absolute;
+    color: rgb(242, 95, 162); 
+    top: 305px;
+    left: 13% ;
+    margin: 0;
+    max-width: 255px;
+    letter-spacing: 1px;
+}
+/*titel opmaak*/
+.sneak1{
+    font-family:"Yay Holiday";
+    color: rgb(242, 95, 162); 
+    letter-spacing: 3px; 
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: -4px; 
+    transform: scaleX(1.3);
+}
+.sneak2{
+    font-family:"Yay Holiday";
+    color: rgb(252, 176, 215);
+    letter-spacing: 1px; 
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -27px;
+    transform: scaleX(1.3);
+}
+/*fotos swipen*/
+.lijstjekleiner{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 1px;
+    scrollbar-width: none;
+    position: relative;
+    top: -35px;
+}
+.lijstjekleiner::-webkit-scrollbar{
+    display: none;
+}
+.lijstjekleiner li{
+    flex: 0 0 auto;
+}
+.lijstjekleiner img{
+    width: 115px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.swipe{
+    font-family: "all-round-gothic", sans-serif;
+    font-size: 20px;
+    position: relative;
+    color: rgb(242, 95, 162);
+    display: flex;
+    justify-content: center;
+    top: -45px;
+}
+/* illustraties opmaak*/
+.tshirt{
+    position: absolute;
+    width: 65px;
+    transform: translateX(35%);
+    top: 300px;   
+}
+.camera{
+    position: absolute;
+    width: 70px;
+    left: 290px ;
+    top: 660px;
+}
+/*opmaak sterren*/ 
+.ster1{
+    position: absolute;
+    width: 42px;
+    top: 452px;
+    left: 152px;
+}
+.ster2{
+    position: absolute;
+    width: 30px;
+    top: 435px;
+    left: 315px; 
+}
+.ster3{
+    position: absolute;
+    width: 30px;
+    top: 425px;
+    left: 210px;
+}
+.ster4{
+    position: absolute;
+    width: 40px;
+    top: 455px;
+    left: 270px;
+}
+.ster5{
+    position: absolute;
+    width: 35px;
+    top: 685px;
+    left: 30px;
+}
+.ster6{
+    position: absolute;
+    width: 40px;
+    top: 925px;
+    left: 270px;
+}
